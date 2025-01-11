@@ -1,7 +1,6 @@
 "use client";
 
 import HomeIcon from "@/components/homeIcon";
-import "./globals.css";
 
 export default function RootLayout({
   children,
