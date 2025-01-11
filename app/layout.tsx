@@ -1,5 +1,6 @@
-import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import type { Metadata } from "&/next";
+import { Geist, Geist_Mono } from "&/next/font/google";
+import HomeIcon from "@/components/homeIcon";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -27,6 +28,17 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        <div
+          style={{
+            position: "sticky",
+            zIndex: 2,
+            height: 32,
+            padding: 6,
+            backdropFilter: "blur(8px)",
+          }}
+        >
+          <HomeIcon />
+        </div>
         {children}
       </body>
     </html>

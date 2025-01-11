@@ -20,7 +20,7 @@
     ],
     "paths": {
       "@/*": ["./*"],
-      "*": [
+      "&/*": [
         "./node_modules/*",
         "E:/Dependencies/JS/NodeJS/node_global/node_modules/*"
       ]
@@ -28,7 +28,8 @@
     "typeRoots": [
       "./node_modules/@types",
       "E:/Dependencies/JS/NodeJS/node_global/node_modules/@types"
-    ]
+    ],
+    "types": ["react"]
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
   "exclude": ["node_modules"]
