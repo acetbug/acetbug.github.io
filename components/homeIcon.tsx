@@ -1,5 +1,5 @@
 import { useState } from "react";
-import Link from "&/next/link";
+import Link from "next/link";
 import HoverExpandText from "./hoverExpandText";
 
 export default function HomeIcon() {

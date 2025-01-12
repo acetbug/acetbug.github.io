@@ -11,19 +11,9 @@ export default function HoverExpandText({
   clearTimeout(timeoutRef.current);
   if (count != target) {
     const step = target > count ? 1 : -1;
-    timeoutRef.current = setTimeout(() => setCount(count + step), 100);
+    timeoutRef.current = window.setTimeout(() => setCount(count + step), 100);
   }
-  return (
-    <span
-      style={{
-        ...style,
-        display: "inline-block",
-        transition: "all 0.1s linear",
-      }}
-    >
-      {text.slice(0, count)}
-    </span>
-  );
+  return <span style={style}>{text.slice(0, count)}</span>;
 }
 
 interface HoverExpandTextProps {

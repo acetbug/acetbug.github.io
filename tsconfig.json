@@ -20,7 +20,7 @@
     ],
     "paths": {
       "@/*": ["./*"],
-      "&/*": [
+      "*": [
         "./node_modules/*",
         "E:/Dependencies/JS/NodeJS/node_global/node_modules/*"
       ]
