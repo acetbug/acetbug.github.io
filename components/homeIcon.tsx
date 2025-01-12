@@ -14,7 +14,7 @@ export default function HomeIcon() {
     >
       <HoverExpandText
         isHovered={isHovered}
-        text={"Awes "}
+        text={"Awes"}
         style={{ fontSize: 20, color: "red" }}
       />
       <HoverExpandText
