@@ -7,18 +7,18 @@ export default function HoverExpandText({
 }: HoverExpandTextProps) {
   const [count, setCount] = useState(1);
   const intervalRef = useRef(0);
+  const timesRef = useRef(-1);
   useEffect(() => {
     const clear = () => window.clearInterval(intervalRef.current);
-    clear();
+    if (timesRef.current >= 0) clear();
     const length = text.length;
     const target = isHovered ? length : 1;
     if (count != target) {
       const speed = 600 / length;
       const step = target > count ? 1 : -1;
-      let times = (target - count) * step;
+      timesRef.current = (target - count) * step;
       intervalRef.current = window.setInterval(() => {
-        console.log(text, times);
-        if (times--) setCount(count + step);
+        if (timesRef.current--) setCount(count + step);
         else clear();
       }, speed);
     }

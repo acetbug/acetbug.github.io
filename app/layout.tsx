@@ -21,7 +21,7 @@ export default function RootLayout({
       <head>
         <title>AwesBooth</title>
       </head>
-      <body>
+      <body style={{ margin: 0, height: "100%", overflow: "hidden" }}>
         <div style={{ display: "flex", flexDirection: "column" }}>
           <TopBar />
           <div style={{ flexGrow: 1 }}>
