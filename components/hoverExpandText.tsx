@@ -18,6 +18,7 @@ export default function HoverExpandText({
       const step = target > count ? 1 : -1;
       timesRef.current = (target - count) * step;
       intervalRef.current = window.setInterval(() => {
+        window.console.log(text, timesRef.current);
         if (timesRef.current--) setCount(count + step);
         else clear();
       }, speed);
