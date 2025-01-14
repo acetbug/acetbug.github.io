@@ -18,7 +18,7 @@ export default function NavBar({ translateX, width }: NavBarProps) {
     >
       <NavItem label={"Blogs"} />
       <NavItem label={"Projects"} />
-      <NavItem label={"Teck stacks"} />
+      <NavItem label={"Tech stacks"} />
       <NavItem label={"Friends"} />
       <NavItem label={"About me"} />
     </div>

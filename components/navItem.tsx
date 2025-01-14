@@ -1,8 +1,8 @@
-import Link from "next/link";
+import MyLink from "./myLink";
 
 export default function NavItem({ label }: NavItemProps) {
   const href = `/${label.toLowerCase().replaceAll(" ", "-")}`;
-  return <Link href={href}>{label}</Link>;
+  return <MyLink href={href}>{label}</MyLink>;
 }
 
 interface NavItemProps {
