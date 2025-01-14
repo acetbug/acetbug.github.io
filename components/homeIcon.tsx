@@ -22,11 +22,7 @@ export default function HomeIcon() {
         text={"Booth"}
         style={{ fontSize: 20, color: "blue" }}
       />
-      <HoverExpandText
-        isHovered={isHovered}
-        text={" - "}
-        style={{ fontSize: 18, color: "gray" }}
-      />
+      <span style={{ fontSize: 18, color: "gray" }}>-</span>
       <HoverExpandText
         isHovered={isHovered}
         text={"acet"}

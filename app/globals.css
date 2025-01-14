@@ -1,0 +1,23 @@
+@media (prefers-color-scheme: light) {
+  div {
+    background-color: #0001;
+  }
+
+  * {
+    color: #222;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  div {
+    background-color: #fff1;
+  }
+
+  * {
+    color: #ddd;
+  }
+}
+
+a {
+  text-decoration: none;
+}
