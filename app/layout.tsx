@@ -26,7 +26,7 @@ export default function RootLayout({
           <TopBar />
           <div style={{ flexGrow: 1 }}>
             <button
-              style={{ position: "absolute" }}
+              style={{ position: "absolute", top: 0, left: 0 }}
               onClick={() => setIsNavBarShown(!isNavBarShown)}
             >
               ☰
