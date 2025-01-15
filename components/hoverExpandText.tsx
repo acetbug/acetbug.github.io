@@ -6,7 +6,6 @@ export default function HoverExpandText({
   style,
 }: HoverExpandTextProps) {
   const [count, setCount] = useState(1);
-  const updateCount = (step: number) => setCount(count + step);
   const intervalRef = useRef(0);
   useEffect(() => {
     const clear = () => window.clearInterval(intervalRef.current);
@@ -18,7 +17,7 @@ export default function HoverExpandText({
       const step = target > count ? 1 : -1;
       let times = (target - count) * step;
       intervalRef.current = window.setInterval(() => {
-        if (times--) updateCount(step);
+        if (times--) setCount((c) => c + step);
         else clear();
       }, speed);
     }
