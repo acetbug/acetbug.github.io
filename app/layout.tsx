@@ -26,10 +26,10 @@ export default function AcetBooth({
         <meta name="color-scheme" content="light dark" />
       </head>
       <body style={{ height: "100%", margin: 0 }}>
-        {children}
         <div
           style={{
             position: "absolute",
+            width: "100%",
             height: "100%",
             display: "flex",
             flexDirection: "column",
@@ -44,6 +44,7 @@ export default function AcetBooth({
         >
           ☰
         </button>
+        {children}
       </body>
     </html>
   );

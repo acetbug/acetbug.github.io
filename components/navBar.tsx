@@ -10,7 +10,7 @@ export default function NavBar({ isCompact, isShown }: NavBarProps) {
         left: left,
         flexGrow: 1,
         width: width,
-        transition: "transform 0.3s ease",
+        transition: "all 0.3s ease",
         display: "flex",
         flexDirection: "column",
         alignItems: "center",
