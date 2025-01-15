@@ -1,21 +1,20 @@
 import NavItem from "./navItem";
 
-export default function NavBar({ translateX, width }: NavBarProps) {
+export default function NavBar({ isCompact, isShown }: NavBarProps) {
+  const width = isCompact ? "100%" : "200px";
+  const left = isShown ? "0" : "-" + width;
   return (
     <div
       style={{
-        position: "absolute",
-        left: 0,
-        top: 0,
+        position: "relative",
+        left: left,
+        flexGrow: 1,
         width: width,
-        height: "100%",
-        transform: `translateX(${translateX})`,
         transition: "transform 0.3s ease",
         display: "flex",
         flexDirection: "column",
         alignItems: "center",
-        justifyContent: "space-evenly",
-        backdropFilter: "blur(10px)",
+        justifyContent: "center",
       }}
     >
       <NavItem label={"Blogs"} />
@@ -28,6 +27,6 @@ export default function NavBar({ translateX, width }: NavBarProps) {
 }
 
 interface NavBarProps {
-  translateX: string;
-  width: string;
+  isCompact: boolean;
+  isShown: boolean;
 }

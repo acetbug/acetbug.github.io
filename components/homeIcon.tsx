@@ -15,23 +15,23 @@ export default function HomeIcon() {
       <HoverExpandText
         isHovered={isHovered}
         text={"Awes"}
-        style={{ fontSize: 20, color: "red" }}
+        style={{ fontSize: 24, color: "red" }}
       />
       <HoverExpandText
         isHovered={isHovered}
         text={"Booth"}
-        style={{ fontSize: 20, color: "blue" }}
+        style={{ fontSize: 24, color: "blue" }}
       />
-      <span style={{ fontSize: 18, color: "gray" }}>-</span>
+      <span style={{ fontSize: 21, color: "gray" }}>-</span>
       <HoverExpandText
         isHovered={isHovered}
         text={"acet"}
-        style={{ fontSize: 16, color: "gray" }}
+        style={{ fontSize: 18, color: "gray" }}
       />
       <HoverExpandText
         isHovered={isHovered}
         text={"bug"}
-        style={{ fontSize: 16, color: "gray" }}
+        style={{ fontSize: 18, color: "gray" }}
       />
     </Link>
   );

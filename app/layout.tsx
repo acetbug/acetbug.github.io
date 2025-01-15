@@ -5,18 +5,19 @@ import TopBar from "@/components/topBar";
 import NavBar from "@/components/navBar";
 import "./global.css";
 
-export default function RootLayout({
+export default function AcetBooth({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
   const [isCompact, setIsCompact] = useState(false);
+  const [isNavBarShown, setIsNavBarShown] = useState(false);
   useEffect(() => {
     const handleResize = () => setIsCompact(window.innerWidth <= 480);
+    handleResize();
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
   }, []);
-  const [isNavBarShown, setIsNavBarShown] = useState(false);
   return (
     <html lang="en" style={{ height: "100%" }}>
       <head>
@@ -25,18 +26,20 @@ export default function RootLayout({
         <meta name="color-scheme" content="light dark" />
       </head>
       <body style={{ height: "100%", margin: 0 }}>
+        {children}
         <div
-          style={{ height: "100%", display: "flex", flexDirection: "column" }}
+          style={{
+            position: "absolute",
+            height: "100%",
+            display: "flex",
+            flexDirection: "column",
+          }}
         >
           <TopBar />
-          {children}
+          <NavBar isCompact={isCompact} isShown={isNavBarShown} />
         </div>
-        <NavBar
-          translateX={isNavBarShown ? "0" : "-100%"}
-          width={isCompact ? "100%" : "200px"}
-        />
         <button
-          style={{ position: "absolute", top: 0, left: 0 }}
+          style={{ position: "absolute", bottom: 0, left: 0 }}
           onClick={() => setIsNavBarShown(!isNavBarShown)}
         >
           ☰

@@ -4,7 +4,7 @@ export default function TopBar() {
   return (
     <div
       style={{
-        height: "32px",
+        height: 40,
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
