@@ -5,6 +5,8 @@ export default function NavBar({ translateX, width }: NavBarProps) {
     <div
       style={{
         position: "absolute",
+        left: 0,
+        top: 0,
         width: width,
         height: "100%",
         transform: `translateX(${translateX})`,
