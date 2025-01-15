@@ -1,19 +1,9 @@
 "use client";
 
-import type { Metadata, Viewport } from "next";
 import { useState, useEffect } from "react";
 import TopBar from "@/components/topBar";
 import NavBar from "@/components/navBar";
 import "./global.css";
-
-export const metadata: Metadata = {
-  title: "AwesBooth",
-  description: "Acetbug's personal website",
-};
-
-export const viewport: Viewport = {
-  colorScheme: "light dark",
-};
 
 export default function RootLayout({
   children,
@@ -29,6 +19,11 @@ export default function RootLayout({
   const [isNavBarShown, setIsNavBarShown] = useState(false);
   return (
     <html lang="en">
+      <head>
+        <title>AwesBooth</title>
+        <meta name="description" content="Acetbug's personal website" />
+        <meta name="color-scheme" content="light dark" />
+      </head>
       <body style={{ margin: 0, height: "100%", overflow: "hidden" }}>
         <div style={{ display: "flex", flexDirection: "column" }}>
           <TopBar />

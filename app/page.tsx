@@ -1,3 +1,5 @@
+import Page from "@/components/page";
+
 export default function Home() {
-  return <div style={{ height: "100%" }}>sdsdsdsdsdsdsdsdsddsdsds</div>;
+  return <Page />;
 }
