@@ -15,6 +15,7 @@ export default function NavBar({ isCompact, isShown }: NavBarProps) {
         flexDirection: "column",
         alignItems: "center",
         justifyContent: "center",
+        backdropFilter: "blur(10px)",
       }}
     >
       <NavItem label={"Blogs"} />

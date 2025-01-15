@@ -22,7 +22,7 @@
   }
 }
 
-:root {
+* {
   box-sizing: border-box;
 }
 
@@ -33,8 +33,4 @@
 a {
   color: inherit;
   text-decoration: none;
-}
-
-div {
-  backdrop-filter: blur(10px);
 }

@@ -8,6 +8,7 @@ export default function TopBar() {
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
+        backdropFilter: "blur(10px)",
       }}
     >
       <HomeIcon />
