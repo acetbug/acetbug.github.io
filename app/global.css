@@ -9,6 +9,10 @@
 }
 
 @media (prefers-color-scheme: dark) {
+  body {
+    background-color: #000;
+  }
+
   div {
     background-color: #fff1;
   }
