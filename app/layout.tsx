@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import TopBar from "@/components/topBar";
 import NavBar from "@/components/navBar";
+import "./global.css";
 
 export default function RootLayout({
   children,
@@ -11,7 +12,7 @@ export default function RootLayout({
 }>) {
   const [isCompact, setIsCompact] = useState(false);
   useEffect(() => {
-    const handleResize = () => setIsCompact(window.innerWidth <= 768);
+    const handleResize = () => setIsCompact(window.innerWidth <= 480);
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
   }, []);
