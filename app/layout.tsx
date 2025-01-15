@@ -18,13 +18,13 @@ export default function RootLayout({
   }, []);
   const [isNavBarShown, setIsNavBarShown] = useState(false);
   return (
-    <html lang="en">
+    <html lang="en" style={{ height: "100%" }}>
       <head>
         <title>AwesBooth</title>
         <meta name="description" content="Acetbug's personal website" />
         <meta name="color-scheme" content="light dark" />
       </head>
-      <body style={{ margin: 0 }}>
+      <body style={{ height: "100%", margin: 0 }}>
         <div
           style={{ height: "100%", display: "flex", flexDirection: "column" }}
         >
